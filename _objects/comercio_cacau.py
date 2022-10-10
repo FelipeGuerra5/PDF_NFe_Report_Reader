@@ -54,11 +54,17 @@ def getFarmer(text):
 def getTransactionDate(text):
     return text[ : 10]
 
-def getQuantity(text):
-    pass
 
 def getCpf(text):
     return text[-75 : -61]
+
+def getQuantity(text):
+    text = text[-55 : -44]
+    idx_start = text.find('\n')
+    idx_end = text[idx_start + 1 : ].find(',')
+    text = text[idx_start + 1 : idx_start + idx_end + 1]
+    text = float(text)
+    return text
 
 def getNfeNumber(text):
     primary = text[-62 : -51]
