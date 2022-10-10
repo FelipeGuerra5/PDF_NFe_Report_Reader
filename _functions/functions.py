@@ -3,7 +3,7 @@
 import tkinter as tk
 from tkinter import filedialog
 
-from _objects.fileclass import reportFile
+from _objects.reportclass import reportFile
 
 
 #  Functions
@@ -23,4 +23,9 @@ def getName(file):
         
         return file_name
 
-
+def toTable(file):
+    # try to open a csv file.
+    # if there is one so open it
+    # if not create one
+    # append dic fiel.file_data to the table.
+    pass
