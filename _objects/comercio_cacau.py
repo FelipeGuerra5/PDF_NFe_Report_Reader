@@ -20,10 +20,6 @@ def getDataOMCom(obj):
         data['key'] = getKey(line)
         
         all_data.append(data)
-    
-    print('[ALL DATA]')
-    for item in all_data:
-        print(item)
 
     return all_data    
 

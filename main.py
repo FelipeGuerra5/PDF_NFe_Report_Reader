@@ -18,8 +18,7 @@ def main():
         print('\n[START OF FILE]' + '-'* 30 + '[START OF FILE]\n')
         print(f'[FILE NAME] {dic[key].file_name} ')
         print(f'[FILE TYPE] {dic[key].file_type} ')
-        # print(f'[FILE TEXT] {dic[key].file_text} ')
-        # print(f'[FILE DATA] {dic[key].file_data} ')
+        print(f'[FILE DATA] {dic[key].file_data} ')
         print('\n[END OF FILE]' + '-'* 30 + '[END OF FILE]\n')
 
 
