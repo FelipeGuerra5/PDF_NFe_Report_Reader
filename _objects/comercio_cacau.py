@@ -56,7 +56,11 @@ def getTransactionDate(text):
 
 
 def getCpf(text):
-    return text[-75 : -61]
+    text = text[-77 : -58]
+    idx_start = text.find('\n')
+    idx_end = text[idx_start + 1 : ].find('\n')
+    text = text[idx_start + 1 : idx_start + idx_end + 1]
+    return text
 
 def getQuantity(text):
     text = text[-55 : -44]
