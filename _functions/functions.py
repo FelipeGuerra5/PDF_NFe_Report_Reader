@@ -1,5 +1,7 @@
 # Imports
-
+from codecs import latin_1_decode
+import pandas as pd
+import numpy as np
 import tkinter as tk
 from tkinter import filedialog
 
@@ -25,7 +27,47 @@ def getName(file):
 
 def toTable(file):
     # try to open a csv file.
+    
     # if there is one so open it
-    # if not create one
+    try:
+        df = pd.read_csv('Main_do_not_use.csv', encoding='latin1', dtype={'nfe_number' : str, 'quantity_(KG)' : int})
+        
+        # append dic fiel.file_data to the table.
+        for row in file.file_data:
+            row['file_name'] = file.file_name
+            print(F'[ROW OF FILE.FILE_DATA] {row}')
+            new_row = pd.DataFrame([row])
+
+            df = pd.concat([new_row, df], ignore_index=True)
+
+        # Save
+        df.to_csv('Main_do_not_use.csv', encoding='latin1')
+        df.to_excel("Invoice Report.xlsx")
+
+    except: 
+        df = pd.DataFrame(columns=[
+            'date_of_transaction', 
+            'farmer_cpf',
+            'farmer', 
+            'quantity_(KG)',
+            'nfe_number',
+            'key',
+            'file_name'
+        ])
+        print('[EXCEPT OK]')
+
     # append dic fiel.file_data to the table.
-    pass
+        for row in file.file_data:
+            row['file_name'] = file.file_name
+            print(F'[ROW OF FILE.FILE_DATA] {row}')
+            new_row = pd.DataFrame([row])
+
+            df = pd.concat([new_row, df], ignore_index=True)
+        
+        print(f'[EACH ROW OK] {df}')
+
+        # Save
+        df.to_csv('Main_do_not_use.csv', encoding='latin1')
+        df.to_excel("Invoice Report.xlsx")
+
+    print('[RETURNED]')

@@ -22,6 +22,8 @@ def main():
         print('\n[END OF FILE]' + '-'* 30 + '[END OF FILE]\n')
 
         toTable(dic[invoice])
+        print(f'[TO TABLE OK]')
+        
 
     print(f'[DICTONARY OF CLASSES] {dic}')
 

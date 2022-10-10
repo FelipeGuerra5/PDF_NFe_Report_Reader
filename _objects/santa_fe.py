@@ -1,4 +1,6 @@
 def getDataSantaFe(obj):
+    pass
+
     print('[GETING DATA FROM SANTA FE]')
     print(obj)
 

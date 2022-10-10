@@ -15,7 +15,7 @@ def getDataOMCom(obj):
         data['date_of_transaction'] = getTransactionDate(line)
         data['farmer_cpf'] = getCpf(line)
         data['farmer'] = getFarmer(line)
-        data['quantity'] = getQuantity(line)
+        data['quantity_(KG)'] = getQuantity(line)
         data['nfe_number'] = getNfeNumber(line)
         data['key'] = getKey(line)
         
@@ -52,7 +52,7 @@ def getTransactionDate(text):
     return text[ : 10]
 
 def getCpf(text):
-    text = text[-77 : -58]
+    text = text[-80 : -58]
     idx_start = text.find('\n')
     idx_end = text[idx_start + 1 : ].find('\n')
     text = text[idx_start + 1 : idx_start + idx_end + 1]
@@ -63,10 +63,13 @@ def getQuantity(text):
     idx_start = text.find('\n')
     idx_end = text[idx_start + 1 : ].find(',')
     text = text[idx_start + 1 : idx_start + idx_end + 1]
-    text = float(text)
+    text = text.replace('.', '')
+    text = int(text)
     return text
 
 def getNfeNumber(text):
-    primary = text[-62 : -51]
+    primary = text[-62 : -50]
+    print(f'[NUMBER PRIMARY TEXT] {primary}')
     idx = primary.find('.')
-    return primary[idx -2 : idx + 4]
+    string = str(primary[idx -2 : idx + 4])
+    return string
