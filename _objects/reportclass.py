@@ -49,18 +49,9 @@ def fileSorter(file_type, obj):
         return file_data
     
     elif file_type == 'comercial_de_santa_fe':
-        # file_data = getDataSantaFe(obj)
-        # return file_data
-        print('[COMERCIAL SANTA FE]')
-        file_data = {
-            'date_of_transaction' : '', 
-            'farmer_cpf' : '',
-            'farmer' : '', 
-            'quantity_(KG)' : '',
-            'nfe_number' : '',
-            'key' : ''
-        }
+        file_data = getDataSantaFe(obj)
         return file_data
+
     else:
         print('[TYPE OF FILE NOT FOUND]')
         file_data = {

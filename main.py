@@ -19,11 +19,10 @@ def main():
         print(f'[FILE NAME] {dic[invoice].file_name} ')
         print(f'[FILE TYPE] {dic[invoice].file_type} ')
         print(f'[FILE DATA] {dic[invoice].file_data} ')
+        # print(f'[FILE TEXT] {dic[invoice].file_text} ')
         print('\n[END OF FILE]' + '-'* 30 + '[END OF FILE]\n')
 
-        toTable(dic[invoice])
-        print(f'[TO TABLE OK]')
-        
+        # toTable(dic[invoice])        
 
     print(f'[DICTONARY OF CLASSES] {dic}')
 
