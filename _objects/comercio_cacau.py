@@ -1,6 +1,7 @@
 import re
 
 def getDataOMCom(obj):
+
     # For testing
     print('[GETING DATA FROM COMERCIO CACAU]')
     
@@ -11,12 +12,12 @@ def getDataOMCom(obj):
     for line in lines:
     
         data = {}
-        data['key'] = getKey(line)
-        data['farmer'] = getFarmer(line)
         data['date_of_transaction'] = getTransactionDate(line)
-        data['quantity'] = getQuantity(line)
         data['farmer_cpf'] = getCpf(line)
+        data['farmer'] = getFarmer(line)
+        data['quantity'] = getQuantity(line)
         data['nfe_number'] = getNfeNumber(line)
+        data['key'] = getKey(line)
         
         all_data.append(data)
     
@@ -25,6 +26,7 @@ def getDataOMCom(obj):
         print(item)
 
     return all_data    
+
 # Parameters for the RegEx
 dt = '\d\d/\d\d/\d\d\d\d\n'
 nm = '.*\n'
@@ -33,7 +35,6 @@ num = ' \d\d.\d\d\d\n'
 val = ' .*.\d\d\n'
 key = '\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d'
 superstring = dt + nm + cpf + num + val + key
-
 
 # Methods for extracting the data from text
 def getLines(text):
@@ -53,7 +54,6 @@ def getFarmer(text):
 
 def getTransactionDate(text):
     return text[ : 10]
-
 
 def getCpf(text):
     text = text[-77 : -58]
