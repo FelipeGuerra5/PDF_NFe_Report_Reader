@@ -30,7 +30,14 @@ def toTable(file):
     
     # if there is one so open it
     try:
-        df = pd.read_csv('Main_do_not_use.csv', encoding='latin1', dtype={'nfe_number' : str, 'quantity_(KG)' : int})
+        df = pd.read_csv(
+            'Main_do_not_use.csv', 
+            encoding='latin1', 
+            dtype={
+                'nfe_number' : str, 
+                'quantity_(KG)' : int
+                }
+        )
         
         # append dic fiel.file_data to the table.
         for row in file.file_data:
@@ -54,7 +61,6 @@ def toTable(file):
             'key',
             'file_name'
         ])
-        print('[EXCEPT OK]')
 
     # append dic fiel.file_data to the table.
         for row in file.file_data:
@@ -64,10 +70,6 @@ def toTable(file):
 
             df = pd.concat([new_row, df], ignore_index=True)
         
-        print(f'[EACH ROW OK] {df}')
-
         # Save
         df.to_csv('Main_do_not_use.csv', encoding='latin1')
         df.to_excel("Invoice Report.xlsx")
-
-    print('[RETURNED]')

@@ -1,16 +1,12 @@
 import re
 
 def getDataOMCom(obj):
-
-    # For testing
-    print('[GETING DATA FROM COMERCIO CACAU]')
-    
+   
     all_data = []
 
     lines = getLines(obj.file_text)
     
-    for line in lines:
-    
+    for line in lines:    
         data = {}
         data['date_of_transaction'] = getTransactionDate(line)
         data['farmer_cpf'] = getCpf(line)
@@ -18,7 +14,6 @@ def getDataOMCom(obj):
         data['quantity_(KG)'] = getQuantity(line)
         data['nfe_number'] = getNfeNumber(line)
         data['key'] = getKey(line)
-        
         all_data.append(data)
 
     return all_data    
@@ -69,7 +64,6 @@ def getQuantity(text):
 
 def getNfeNumber(text):
     primary = text[-62 : -50]
-    print(f'[NUMBER PRIMARY TEXT] {primary}')
     idx = primary.find('.')
     string = str(primary[idx -2 : idx + 4])
     return string

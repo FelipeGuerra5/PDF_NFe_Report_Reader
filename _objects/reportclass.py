@@ -15,15 +15,8 @@ class reportFile:
         self.file_text = self.setText(file)
         self.file_type = self.setType(self.file_text)
         
-        # The file_data must an array with 5 itemns
+        # Obs: The file_data must return an array with 5 itemns
         self.file_data = fileSorter(self.file_type, self)
-            # data = {}
-            # data['date_of_transaction'] = getTransactionDate(line)
-            # data['farmer_cpf'] = getCpf(line)
-            # data['farmer'] = getFarmer(line)
-            # data['quantity'] = getQuantity(line)
-            # data['nfe_number'] = getNfeNumber(line)
-            # data['key'] = getKey(line)
 
     def setText(self, file):
         text = ""
