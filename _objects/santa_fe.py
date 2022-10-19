@@ -6,8 +6,8 @@ def getDataSantaFe(obj):
     user_block = getUserBlock(obj.file_text)
     
     for block in user_block:    
+        data = {}
         for inv in user_block[block]['invoices']:
-            data = {}
             data['date_of_transaction'] = getTransactionDate(inv)
             data['farmer_cpf'] = block
             data['farmer'] = user_block[block]['name'].title()
@@ -62,11 +62,15 @@ def getTransactionDate(text):
 def getNfeNumber(text):
     r = re.compile('\d\d\d\d\d\n')
     number = r.findall(text)
-    return number[0][ : 5]
+    return str(number[0][ : 5])
 
 def getQuantity(text, number):
     idx_start = text.find(number)
     idx_end = text[idx_start + 6 : ].find('\n')
-    return text[idx_start + 6 : idx_start + 6 + idx_end]
+    qtt = text[idx_start + 6 : idx_start + 3 + idx_end]
+    qtt = qtt.replace('.', '')
+    print(qtt)
+    return int(qtt)
+
 
     

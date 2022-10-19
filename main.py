@@ -22,7 +22,7 @@ def main():
             print(f'[FILE DATA] {data} ')
         print('\n[END OF FILE]' + '-'* 30 + '[END OF FILE]\n')
 
-        # toTable(dic[invoice])        
+        toTable(dic[invoice])        
 
     print(f'[DICTONARY OF CLASSES] {dic}')
 

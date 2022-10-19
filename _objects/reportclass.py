@@ -17,6 +17,7 @@ class reportFile:
         
         # Obs: The file_data must return an array with 5 itemns
         self.file_data = fileSorter(self.file_type, self)
+        print(self.file_data)
 
     def setText(self, file):
         text = ""
@@ -46,20 +47,13 @@ class reportFile:
 def fileSorter(file_type, obj):
     if file_type == 'comercio_de_cacau_ltda':
         file_data = getDataOMCom(obj)
+        print(f'[FILE DATA] {file_data}')
         return file_data
     
     elif file_type == 'comercial_de_santa_fe':
         file_data = getDataSantaFe(obj)
+        print(f'[FILE DATA] {file_data}')
         return file_data
 
     else:
-        print('[TYPE OF FILE NOT FOUND]')
-        file_data = {
-            'date_of_transaction' : '', 
-            'farmer_cpf' : '',
-            'farmer' : '', 
-            'quantity_(KG)' : '',
-            'nfe_number' : '',
-            'key' : ''
-        }
-        return file_data
+        return 'Not_suported_File'
