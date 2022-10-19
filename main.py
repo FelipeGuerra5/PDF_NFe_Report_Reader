@@ -18,8 +18,8 @@ def main():
         print('\n[START OF FILE]' + '-'* 30 + '[START OF FILE]\n')
         print(f'[FILE NAME] {dic[invoice].file_name} ')
         print(f'[FILE TYPE] {dic[invoice].file_type} ')
-        print(f'[FILE DATA] {dic[invoice].file_data} ')
-        # print(f'[FILE TEXT] {dic[invoice].file_text} ')
+        for data in dic[invoice].file_data:
+            print(f'[FILE DATA] {data} ')
         print('\n[END OF FILE]' + '-'* 30 + '[END OF FILE]\n')
 
         # toTable(dic[invoice])        

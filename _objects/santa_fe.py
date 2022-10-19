@@ -1,75 +1,72 @@
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-# NEXT WORK DAY
-    # In order oto find what I want first: find all cpf,
-    #  for they do not repeat.
-        # then:
-    # find index of each CPF
-    # find the index for the -> Totais do fornecedor:
-    # get all info from one '\n' back from cpf and 2 '\n' after Totais do fornecedor:
-        # then
-    # extract each block of invoice using the same name and cpf
-    # return this as info for the sortData function
-
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
 import re
 
 def getDataSantaFe(obj):
     
     all_data = []
+    user_block = getUserBlock(obj.file_text)
+    
+    for block in user_block:    
+        for inv in user_block[block]['invoices']:
+            data = {}
+            data['date_of_transaction'] = getTransactionDate(inv)
+            data['farmer_cpf'] = block
+            data['farmer'] = user_block[block]['name'].title()
+            data['nfe_number'] = getNfeNumber(inv)
+            data['quantity_(KG)'] = getQuantity(inv, data['nfe_number'])
+            data['key'] = getKey(inv)
+            all_data.append(data)
+    
+    return all_data
+    
+def getUserBlock(text):
+    # Find all cpfs
+    r = re.compile('\d\d\d.\d\d\d.\d\d\d-\d\d')
+    users = r.findall(text)
 
-    lines = getLines(obj.file_text)
+    user_block = {}
 
-    for line in lines:    
-        data = {}
-        data['date_of_transaction'] = getTransactionDate(line)
-        data['farmer_cpf'] = getCpf(line)
-        data['farmer'] = getFarmer(line)
-        data['quantity_(KG)'] = getQuantity(line)
-        data['nfe_number'] = getNfeNumber(line)
-        data['key'] = getKey(line)
-        all_data.append(data)
+    # Find all Access keys inside it
+    for i, user in enumerate(users):
+        idx_start = text.index(user)
+        try:
+            idx_end = text.index(users[i + 1])
+        except:
+            idx_end = -1
 
-    return all_data    
+        # Parameters for the RegEx
+        dt = '\d\d/\d\d/\d\d\d\d\n'
+        num = '\d\d\d\d\d\n'
+        val = '.*.\d\d\n'
+        key = '\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d'
+        superstring = val + dt + num + val + val + key
+        k = re.compile(superstring)
+        blocks = k.findall(text[idx_start : idx_end])
+        
+        # Gathering info for each user
+        user_block[f'{user}'] = {}
+        idx_name = text[ : idx_start - 2].rfind('\n')
+        user_block[f'{user}']['name'] = text[idx_name + 1 : idx_start - 1]
+        user_block[f'{user}']['invoices'] = blocks
 
-# ANTONIO TIAGO DOS SANTOS
-# 349.893.665-49 -> good for anchor
-
-nm = '.*\n'
-cpf = '\d\d\d.\d\d\d.\d\d\d-\d\d\n'
-tt = '\totais do fornecedor:'
-qtt = '.*\n'
-avg = '.*\n'
-
-superstring = nm + cpf + we + tt + qtt + avg
-
-
-def getLines(text):
-    print('[GET LINES]')
-    r = re.compile(nm + cpf)
-    lines_array = r.findall(text)
-    for line in lines_array:
-        print(f'[EACH LINE FOR LINES_ARRAY] {line} {l}')
-    return lines_array
+    return user_block
 
 def getKey(text):
-    return text[-44 : ]
-
-def getFarmer(text):
-   pass
+    return text[-43 : ]
 
 def getTransactionDate(text):
-    pass
-
-
-def getCpf(text):
-    pass
-
-
-def getQuantity(text):
-    pass
+    r = re.compile('\d\d/\d\d/\d\d\d\d')
+    date = r.findall(text)
+    return date[0]
 
 
 def getNfeNumber(text):
-    pass
+    r = re.compile('\d\d\d\d\d\n')
+    number = r.findall(text)
+    return number[0][ : 5]
+
+def getQuantity(text, number):
+    idx_start = text.find(number)
+    idx_end = text[idx_start + 6 : ].find('\n')
+    return text[idx_start + 6 : idx_start + 6 + idx_end]
+
+    
