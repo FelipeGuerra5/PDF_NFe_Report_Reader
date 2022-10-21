@@ -23,7 +23,7 @@ def main():
         print('\n[END OF FILE]' + '-'* 30 + '[END OF FILE]\n')
 
         toTable(dic[invoice])        
-
+ 
     print(f'[DICTONARY OF CLASSES] {dic}')
 
 if __name__ == "__main__":
