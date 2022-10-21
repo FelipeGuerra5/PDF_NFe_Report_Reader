@@ -58,7 +58,6 @@ def getTransactionDate(text):
     date = r.findall(text)
     return date[0]
 
-
 def getNfeNumber(text):
     r = re.compile('\d\d\d\d\d\n')
     number = r.findall(text)
@@ -69,7 +68,6 @@ def getQuantity(text, number):
     idx_end = text[idx_start + 6 : ].find('\n')
     qtt = text[idx_start + 6 : idx_start + 3 + idx_end]
     qtt = qtt.replace('.', '')
-    print(qtt)
     return int(qtt)
 
 

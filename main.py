@@ -1,3 +1,5 @@
+import time
+
 from  _objects.reportclass import reportFile
 from _functions.functions import *
 
@@ -8,8 +10,12 @@ def main():
     # Assign each pdf for a reportFile Class
     files = openFiles()
     for i, file in enumerate(files):
-        dic[f'file_name{i}'] = reportFile(file)
-
+        try:
+            dic[f'file_name{i}'] = reportFile(file)
+        except:
+            file_name = getName(file)
+            file_name = file_name[1 : ]
+            alertUser(file_name)
 
     # Login in the terminal
     for invoice in dic:
@@ -18,13 +24,12 @@ def main():
         print('\n[START OF FILE]' + '-'* 30 + '[START OF FILE]\n')
         print(f'[FILE NAME] {dic[invoice].file_name} ')
         print(f'[FILE TYPE] {dic[invoice].file_type} ')
-        for data in dic[invoice].file_data:
-            print(f'[FILE DATA] {data} ')
+        print(f'[LINE DATA] {dic[invoice].file_data} ')
         print('\n[END OF FILE]' + '-'* 30 + '[END OF FILE]\n')
-
-        toTable(dic[invoice])        
+        toTable(dic[invoice])
+    
+    print('\n[TABLE DONE]' + '-'* 30 + '[TABLE DONE]\n')
+    time.sleep(1)
  
-    print(f'[DICTONARY OF CLASSES] {dic}')
-
 if __name__ == "__main__":
     main()

@@ -3,7 +3,6 @@ import re
 def getDataOMCom(obj):
    
     all_data = []
-
     lines = getLines(obj.file_text)
     
     for line in lines:    
