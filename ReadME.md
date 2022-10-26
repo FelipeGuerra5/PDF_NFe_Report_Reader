@@ -43,30 +43,30 @@ ___
 - Execute it.
 
 
-<img src="/_docs/img/execute.png" style="border-radius:5px;">
-<label for="img/execute.png" style="margin-left: 30px">Execute the NFe_Report Reader</label>
+<img src="https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/_docs/img/execute.PNG?raw=true" name="execute" style="border-radius:5px;">
+<label for="execute" style="margin-left: 30px">Execute the NFe_Report Reader</label>
 
 <br>
 
 - Choose the files to be read
 
-<img src="img/select.png" style="border-radius:7px;">
-<label for="img/select.png" style="margin-left: 30px">Choose the reports you want to read</label>
+<img src="https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/_docs/img/select.PNG?raw=true" name="select" style="border-radius:7px;">
+<label for="select" style="margin-left: 30px">Choose the reports you want to read</label>
 
 <br>
 
 - If there are alerts read them and then click ok to continue.
 
-<img src="https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/_docs/img/alert.PNG?raw=true" style="border-radius:7px;">
-<label for="img/alert.png" style="margin-left: 30px">The alert show the name of unreadable files</label>
+<img src="https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/_docs/img/alert.PNG?raw=true" name="alert" style="border-radius:7px;">
+<label for="alert" style="margin-left: 30px">The alert show the name of unreadable files</label>
 
 <br>
 
 - Open the ready Excel file.
  <br>
 
-<img src="img/done.png" style="border-radius:7px;">
-<label for="img/done.png" style="margin-left: 30px">Open the Invoice Report file</label>
+<img src="https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/_docs/img/done.PNG?raw=true" name="done" style="border-radius:7px;">
+<label for="done" style="margin-left: 30px">Open the Invoice Report file</label>
 
 <br>
 
@@ -74,8 +74,8 @@ ___
 
 <br>
 
-<img src="img/excel_sheet.png" style="border-radius:7px;">
-<label for="img/excel_sheet.png" style="margin-left: 30px">The excel file should look like this.</label>
+<img src="https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/_docs/img/excel_sheet.PNG?raw=true" name="excel_sheet" style="border-radius:7px;">
+<label for="excel_sheet" style="margin-left: 30px">The excel file should look like this.</label>
 
 <br>
 
