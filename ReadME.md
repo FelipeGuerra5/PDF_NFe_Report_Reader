@@ -38,7 +38,7 @@ ___
 ### How it Works
 ---
 
-- [Download](#https://olam-my.sharepoint.com/:u:/g/personal/felipe_guerra_ofi_com/Eeza_bT9of5OnQwTw69bbtkBClJpC_9fgc3nh61kVdVG_A?e=BFzKYS) It
+- [Download](#https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/archive/refs/heads/main.zip) It
 
 - Execute it.
 
