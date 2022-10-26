@@ -4,8 +4,8 @@ import fitz
 import tkinter
 
 # Functions for Each Type of NFe
-from _objects.comercio_cacau import getDataOMCom
-from _objects.santa_fe import getDataSantaFe
+from _objects.company_1 import getDataOMCom
+from _objects.company_2 import getDataSantaFe
 
 
 class reportFile:
