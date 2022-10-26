@@ -57,7 +57,7 @@ ___
 
 - If there are alerts read them and then click ok to continue.
 
-<img src="img/alert.png" style="border-radius:7px;">
+<img src="https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/_docs/img/alert.PNG?raw=true" style="border-radius:7px;">
 <label for="img/alert.png" style="margin-left: 30px">The alert show the name of unreadable files</label>
 
 <br>
