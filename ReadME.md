@@ -43,7 +43,7 @@ ___
 - Execute it.
 
 
-<img src="_docs/img/execute.png" style="border-radius:5px;">
+<img src="/_docs/img/execute.png" style="border-radius:5px;">
 <label for="img/execute.png" style="margin-left: 30px">Execute the NFe_Report Reader</label>
 
 <br>
