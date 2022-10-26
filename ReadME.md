@@ -38,9 +38,16 @@ ___
 ### How it Works
 ---
 
-- [Download](#https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/archive/refs/heads/main.zip) It
+- Fork It / Clone it
 
-- Execute it.
+- Execute "main.py" or
+```powershell
+pip install -r requirements.txt
+pip install pyinstaller
+pyintaller --onefile main.py
+
+main.exe
+```
 
 
 <img src="https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/_docs/img/execute.PNG?raw=true" name="execute" style="border-radius:5px;">
