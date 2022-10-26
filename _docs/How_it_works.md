@@ -1,8 +1,9 @@
-### Automatic NFe Reader
+### Automatic NFe Report Reader
 ___
 
 - [Problem](#problem)
 - [Solution](#solution)
+- [Numbers](#numbers)
 - [Cost](#cost)
 - [How it Works](#how-it-works)
 - [Technical Info](#technical-information)
@@ -39,7 +40,7 @@ ___
     - Time to select files: - (depends on user)
     - Time to read files: for 300 lines under 2 s
 
-- Considering the average of 50 reports / month
+- Considering the average of 50 reports / month with 30 lines each (given by the user)
     - Brings a economy of just above 1 hour by work day
 
 <br>
