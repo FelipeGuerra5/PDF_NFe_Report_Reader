@@ -23,6 +23,7 @@ class reportFile:
         with fitz.open(file) as doc:
             for page in doc:
                 text += page.get_text()
+            print(f'[TEXT] {text}')
         return text.lower()
 
 
