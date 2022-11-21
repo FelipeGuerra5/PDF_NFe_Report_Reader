@@ -1,17 +1,8 @@
 NfeReportReader/
 _objects/__pycache__/
+_functions/__pycache__/functions.cpython-39.pyc
 
 Invoice Report.xlsx
 Main_do_not_use.csv
 
-
-
-
-_objects/__pycache__/company_1.cpython-39.pyc
-_objects/__pycache__/company_2.cpython-39.pyc
-build/
-dist/
-
-_functions/__pycache__/functions.cpython-39.pyc
-_objects/__pycache__/reportclass.cpython-39.pyc
 
