@@ -15,7 +15,7 @@ def getDataOMCom(obj):
         data['key'] = getKey(line)
         all_data.append(data)
 
-    return all_data    
+    return all_data
 
 # Parameters for the RegEx
 dt = '\d\d/\d\d/\d\d\d\d\n'
