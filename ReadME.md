@@ -91,6 +91,10 @@ main.exe
 ### Technical Information
 ---
 
+- **Last Update** 
+    - 19 NOV 2022 version 2.1
+        - Corrected for absency of character in the name field for isolated farmers
+
 - **Language:** Python 3.9.12
 
 - **libs:** certifi==2022.9.24; charset-normalizer==2.1.1; ci-info==0.3.0; click==8.1.3; colorama==0.4.5; configobj==5.0.6; configparser==5.3.0; easygui==0.98.3; et-xmlfile==1.1.0; etelemetry==0.3.0; filelock==3.8.0; fitz==0.0.1.dev2; future==0.18.2; httplib2==0.20.4; idna==3.4; isodate==0.6.1; looseversion==1.0.1; lxml==4.9.1; networkx==2.8.7; nibabel==4.0.2; nipype==1.8.5; numpy==1.23.3; openpyxl==3.0.10; packaging==21.3; pandas==1.5.0; pathlib==1.0.1; prov==2.0.0; pydot==1.4.2; PyMuPDF==1.20.2; pyparsing==3.0.9; python-dateutil==2.8.2; pytz==2022.4; pyxnat==1.5; rdflib==6.2.0; regex==2022.9.13; requests==2.28.1; scipy==1.9.2; simplejson==3.17.6; six==1.16.0; tk==0.1.0; traits==6.3.2; urllib3==1.26.12
