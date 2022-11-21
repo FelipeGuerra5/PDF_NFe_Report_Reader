@@ -19,7 +19,7 @@ def getDataOMCom(obj):
 
 # Parameters for the RegEx
 dt = '\d\d/\d\d/\d\d\d\d\n'
-nm = '.*\n'
+nm = '.*\s'
 cpf = '\d\d\d.\d\d\d.\d\d\d-\d\d\n'
 num = ' \d\d.\d\d\d\n'
 val = ' .*.\d\d\n'

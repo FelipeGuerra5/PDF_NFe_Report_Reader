@@ -1,0 +1,30 @@
+Invoice Report.xlsx
+Main_do_not_use.csv
+NfeReportReader/Lib/site-packages/PyInstaller/
+NfeReportReader/Lib/site-packages/__pycache__/pefile.cpython-39.pyc
+NfeReportReader/Lib/site-packages/__pycache__/peutils.cpython-39.pyc
+NfeReportReader/Lib/site-packages/_pyinstaller_hooks_contrib/
+NfeReportReader/Lib/site-packages/altgraph-0.17.3.dist-info/
+NfeReportReader/Lib/site-packages/altgraph/
+NfeReportReader/Lib/site-packages/ordlookup/
+NfeReportReader/Lib/site-packages/pefile-2022.5.30.dist-info/
+NfeReportReader/Lib/site-packages/pefile.py
+NfeReportReader/Lib/site-packages/peutils.py
+NfeReportReader/Lib/site-packages/pyinstaller-5.5.dist-info/
+NfeReportReader/Lib/site-packages/pyinstaller_hooks_contrib-2022.10.dist-info/
+NfeReportReader/Lib/site-packages/pywin32_ctypes-0.2.0.dist-info/
+NfeReportReader/Lib/site-packages/win32ctypes/
+NfeReportReader/Scripts/pyi-archive_viewer.exe
+NfeReportReader/Scripts/pyi-bindepend.exe
+NfeReportReader/Scripts/pyi-grab_version.exe
+NfeReportReader/Scripts/pyi-makespec.exe
+NfeReportReader/Scripts/pyi-set_version.exe
+NfeReportReader/Scripts/pyinstaller.exe
+_docs/HIW - Report Reader.pdf
+_objects/__pycache__/company_1.cpython-39.pyc
+_objects/__pycache__/company_2.cpython-39.pyc
+build/
+dist/
+
+_functions/__pycache__/functions.cpython-39.pyc
+_objects/__pycache__/reportclass.cpython-39.pyc
