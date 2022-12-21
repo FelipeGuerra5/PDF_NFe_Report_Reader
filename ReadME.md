@@ -1,6 +1,7 @@
 ### Automatic NFe Report Reader
 ___
 
+- [Version/Donwload](#version-and-download)
 - [Problem](#problem)
 - [Solution](#solution)
 - [How it Works](#how-it-works)
@@ -108,5 +109,10 @@ main.exe
     - [GitHub](https://github.com/FelipeGuerra5) 
     - [LinkedIn](https://www.linkedin.com/in/felipe-baldim-guerra-858556127/)
     - [Support Email](felipe.guerra@ofi.com)
+
+### **Version and Download**
+
+- Version 2.3.0
+- [Nfe_ReportReader_2.3.0](#https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/dist/main.exe)
 
 <br>
