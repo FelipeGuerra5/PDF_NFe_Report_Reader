@@ -113,6 +113,6 @@ main.exe
 ### **Version and Download**
 
 - Version 2.3.0
-- [Nfe_ReportReader_2.3.0](https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/dist/main.exe)
+- [Nfe_ReportReader_2.3.0](https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/dist)
 
 <br>
