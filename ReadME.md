@@ -57,7 +57,7 @@ main.exe
 
 - Choose the files to be read
 
-<img src="https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/_docs/img/select.PNG?raw=true" name="select" style="border-radius:7px;">
+<img src="_images/select.png" name="select" style="border-radius:7px;">
 <label for="select" style="margin-left: 30px">Choose the reports you want to read</label>
 
 <br>
@@ -81,7 +81,7 @@ main.exe
 
 <br>
 
-<img src="https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/_docs/img/excel_sheet.PNG?raw=true" name="excel_sheet" style="border-radius:7px;">
+<img src="_images/excel_sheet.png" name="excel_sheet" style="border-radius:7px;">
 <label for="excel_sheet" style="margin-left: 30px">The excel file should look like this.</label>
 
 <br>

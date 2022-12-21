@@ -25,10 +25,10 @@ def main():
         print(f'[FILE NAME] {dic[invoice].file_name} ')
         print(f'[FILE TYPE] {dic[invoice].file_type} ')
         print(f'[LINE DATA] {dic[invoice].file_data} ')
-        print('\n[END OF FILE]' + '-'* 30 + '[END OF FILE]\n')
+        print('\n[END OF FILE]' + '-'* 45 + '[END OF FILE]\n')
         toTable(dic[invoice])
     
-    print('\n[TABLE DONE]' + '-'* 30 + '[TABLE DONE]\n')
+    print('\n[TABLE DONE]' + '-'* 45 + '[TABLE DONE]\n')
     time.sleep(1)
  
 if __name__ == "__main__":

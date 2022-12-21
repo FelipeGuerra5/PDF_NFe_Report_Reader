@@ -37,9 +37,9 @@ def toTable(file):
         # try to open a csv file.
         try:
             df = pd.read_csv(
-                'Main_do_not_use.csv', 
+                'Main_do_not_use.csv',
                 dtype={
-                    'nfe_number' : str, 
+                    'nfe_number' : str,
                     'quantity_(KG)' : int
                     },
                 index_col=[0]
