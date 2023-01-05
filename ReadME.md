@@ -93,8 +93,8 @@ main.exe
 ---
 
 - **Last Update** 
-    - 19 NOV 2022 version 2.1
-        - Corrected for absency of character in the name field for isolated farmers
+    - 05 JAN 2023 version 2.3.1
+        - The company 01 can insert now CNPJ instead of just CPF for document.
 
 - **Language:** Python 3.9.12
 
@@ -112,7 +112,7 @@ main.exe
 
 ### **Version and Download**
 
-- Version 2.3.0
-- [Nfe_ReportReader_2.3.0](https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/dist)
+- Version 2.3.1
+- [Nfe_ReportReader_2.3.1](https://github.com/FelipeGuerra5/PDF_NFe_Report_Reader/blob/main/dist)
 
 <br>
