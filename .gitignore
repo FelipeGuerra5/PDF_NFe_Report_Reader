@@ -2,6 +2,8 @@ NfeReportReader/
 report_reader2.3/
 _samples/
 _objects/__pycache__/
+jupyter_aux/
+
 _functions/__pycache__/functions.cpython-39.pyc
 build/
 _functions/__pycache__/

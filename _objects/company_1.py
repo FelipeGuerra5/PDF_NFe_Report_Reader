@@ -22,17 +22,22 @@ dt = '\d\d/\d\d/\d\d\d\d\n'
 nm = '.*\n'
 nm_exc = '.*'
 cpf = '\d\d\d.\d\d\d.\d\d\d-\d\d\n'
+cnpj = '\d\d[.]\d\d\d[.]\d\d\d[/]\d\d\d\d[-]\d\d\s'
 num = ' \d\d.\d\d\d\n'
 val = ' .*.\d\d\n'
 key = '\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d'
 
 superstring = dt + nm + cpf + num + val + key
 superstring_exc = dt + nm_exc + cpf + num + val + key
+superstring_cnpj = dt + nm + cnpj + num + val + key
+
 
 # Methods for extracting the data from text
 def getLines(text):
     r = re.compile(superstring)
     lines_array = r.findall(text)
+    
+    # Superstring exception
     try:
         r = re.compile(superstring_exc)
         excp_array = r.findall(text)
@@ -40,7 +45,19 @@ def getLines(text):
             for item in excp_array:
                 lines_array.append(item)
     except:
-        print('no exception')
+        print('[Company 01] -> [getLines] -> [Exception]')
+
+    # Superstring with CNPJ
+    try:
+        r = re.compile(superstring_cnpj)
+        cnpj_array = r.findall(text)
+        print(f'[CNPJ ARRAY] -> {cnpj_array}')
+        if len(cnpj_array) > 0:
+            for item in cnpj_array:
+                lines_array.append(item)
+    except:
+        print('[Company 01] -> [getLines] -> [Exception] -> [CNPJ string]')
+
     return lines_array
 
 def getKey(text):
@@ -57,11 +74,18 @@ def getTransactionDate(text):
     return text[ : 10]
 
 def getCpf(text):
-    cpf = '\d\d\d.\d\d\d.\d\d\d-\d\d'
-    r = re.compile(cpf)
-    cpf = r.findall(text)
-    text = cpf[0]
-    print(cpf[0])
+    try:
+        cpf = '\d\d\d.\d\d\d.\d\d\d-\d\d'
+        r = re.compile(cpf)
+        cpf = r.findall(text)
+        text = cpf[0]
+        print(cpf[0])
+    except:
+        cnpj = '\d\d[.]\d\d\d[.]\d\d\d[/]\d\d\d\d[-]\d\d\s'
+        r = re.compile(cnpj)
+        cnpj = r.findall(text)
+        text = cnpj[0]
+        print(cnpj[0][ : -2])
     return text
 
 def getQuantity(text):
